@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="form-container" >
+        <h2>New Call</h2>
+        <form action="">
+            <div id="imageURL" class="label-input">
+                <label for="url">Image URL :</label>
+                <input type="url" placeholder="https://example.com/photoes.jpg" id="url-input" class="txt-input" autocomplete="off" required>
+                <small id="imgURLError" class="error" ></small>
+            </div>
+            <div id="name" class="label-input">
+                <label for="name">Full Name :</label>
+                <input type="text" placeholder="Enter full name" id="name-input" class="txt-input" autocomplete="off" required>
+                <small id="nameError" class="error"></small>
+            </div>
+            <div id="homeTown" class="label-input">
+                <label for="hTown">Home Town :</label>
+                <input type="text" placeholder="Enter home town" id="hTown-input" class="txt-input" autocomplete="off" required>
+                <small id="hTownError" class="error"></small>
+            </div>
+            <div id="purpose" class="label-input">
+                <label for="purpose">Purpose :</label>
+                <input type="text" placeholder="Quick appointment note"  id="purpose-input" class="txt-input" autocomplete="off" required>
+                <small id="purposeError" class="error"></small>
+            </div>
+
+            <div id="category" class="label-input">
+                <h3>Category :</h3>
+
+                <label for="emergency">
+                    <input type="radio" name="category" value="Emergency" id="emergency" class="radio-input">
+                    Emergency
+                </label>
+
+                <label for="important">
+                    <input type="radio" name="category" value="Important" id="important" class="radio-input">
+                    Important
+                </label>
+
+                <label for="urgent">
+                    <input type="radio" name="category" value="Urgent" id="urgent" class="radio-input">
+                    Urgent
+                </label>
+
+                <label for="noRush">
+                    <input type="radio" name="category" value="No Rush" id="noRush" class="radio-input">
+                    No Rush
+                </label>
+
+                <small id="categoryError" class="error"></small>
+            </div>
+
+            <button type="submit" id="create-note-btn">Create Note</button>
+            <button type="button" id="close-btn">Close</button>
+        </form>
+    </div>
+    
+    <div id="notes-container">
+        <div id="left-icon">
+            <button id="open-form-btn"><ion-icon name="add-outline"></ion-icon></button>
+            <button id="upBtn"><ion-icon name="arrow-up-outline"></ion-icon></button>
+            <button id="downBtn"><ion-icon name="arrow-down-outline"></ion-icon></button>
+        </div>
+
+        <div id="stack">
+            <!-- <div class="notes">
+                <div class="image">
+                    <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80" alt="image">
+                </div>
+                <h2>Ritesh Soni</h2>
+
+                <div class="details">
+                    <div class="left-detail">
+                        <h3>Home Town</h3>
+                        <h3>Bookings</h3>
+                    </div>
+                    <div class="right-detail">
+                        <h3>Uttar Pradesh</h3>
+                        <h3>3 Times</h3>
+                    </div>
+                </div>
+
+                <div class="ctc-btn">
+                    <button id="call-btn"><ion-icon name="call-outline"></ion-icon>Call</button>
+                    <button><ion-icon name="chatbox-ellipses-outline"></ion-icon>Message</button>
+                </div>
+            </div> -->
+        </div>
+
+        <div id="right-colors">
+            <div class="color" id="black" onclick="changeBackground('black')"></div>
+            <div class="color" id="purple" onclick="changeBackground('purple')"></div>
+            <div class="color" id="brown" onclick="changeBackground('brown')"></div>
+            <div class="color" id="grey" onclick="changeBackground('rgb(81, 80, 80)')"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
