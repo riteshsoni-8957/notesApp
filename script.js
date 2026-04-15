@@ -115,6 +115,8 @@ formContainer.addEventListener("submit", function(dets) {
     // hide form and show cards when form submit
     formContainer.style.display = "none";
     notesContainer.style.display = "flex";
+
+    showNotes();
 })
 
 
